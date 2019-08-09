@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="middle">
+        <div class="image">
+            <img src="img.jpg" alt="" class="img">
+            <div class="text">该图片可能有敏感信息。</div>
+            <button class="btn" onclick="coverImage()">偷看</button>
+        </div>
+    </div>
+    <script>
+        var btn = document.getElementsByClassName('btn')[0],
+            text = document.getElementsByClassName('text')[0],
+            img = document.getElementsByClassName('img')[0],
+            c = 0;
+        function coverImage(){
+            if(c == 0 ){
+                btn.innerHTML = "非礼勿视";
+                text.style.display = "none";
+                img.style.filter = "blur(0)";
+                c = 1
+            }
+
+            else {
+                btn.innerHTML = "偷看";
+                text.style.display = "block";
+                img.style.filter = "blur(24px)";
+                c = 0
+            }
+        }
+    </script>
+</body>
+</html>
