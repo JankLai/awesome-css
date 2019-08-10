@@ -1,45 +1,54 @@
 body {
-    margin: 0;
-    padding: 0;
-    background: url(background.jpg) no-repeat;
-    background-size: 100%;
-
-
+  margin: 0;
+  padding: 0;
+  background: url(background.jpg) no-repeat;
+  background-size: 100%;
 }
-
 
 a {
-    /* display: block; */
-    /* padding: 84px, 30px; */
-    padding-top: 50px;    
-    padding-bottom: 50px;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    background: rgba(29, 171, 209, 1); 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 20px;
-    font-family: sans-serif;
-    text-transform: uppercase;
-    border-radius: 50%;
-    animation: animate 2s linear infinite;
+  /* display: block; */
+  /* padding: 84px, 30px; */
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background: rgba(29, 171, 209, 0.6);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  border-radius: 50%;
+  animation: important2 2s linear infinite;
 }
 
-@keyframes animate {
-    0% {
-        box-shadow: 0 0 0 0 rgba(29, 171, 209, 0.6),0 0 0 0 rgba(29, 171, 209, 0.6)
-    }
-    30% {
-        box-shadow: 0 0 0 50px rgba(29, 171, 209, 0), 0 0 0 0 rgba(29, 171, 209, 0.6)
-    }
-    65% {
-        box-shadow: 0 0 0 50px rgba(96, 142, 155, 0), 0 0 0 30px rgba(29, 171, 209, 0)
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(29, 171, 209, 0), 0 0 0 30px rgba(29, 171, 209, 0)
-    }
+@keyframes my_animate {
+  0% {
+    box-shadow: 0 0 0 0 rgba(29, 171, 209, 0.6), 0 0 0 0 rgba(29, 171, 209, 0.6);
+  }
+  30% {
+    box-shadow: 0 0 0 50px rgba(29, 171, 209, 0),
+      0 0 0 0 rgba(29, 171, 209, 0.6);
+  }
+  65% {
+    box-shadow: 0 0 0 50px rgba(96, 142, 155, 0),
+      0 0 0 30px rgba(29, 171, 209, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(29, 171, 209, 0), 0 0 0 30px rgba(29, 171, 209, 0);
+  }
 }
 
+@keyframes important2 {
+  from {
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+  to {
+    margin-top: 150px !important; /* 忽略 */
+    margin-bottom: 50px;
+  }
+}

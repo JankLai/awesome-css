@@ -1,2 +1,27 @@
 1.
 a标签为行内元素，可设置padding-top和padding-bottom
+2.
+a:hover:before
+:before 伪元素，不加载在dom中，起特效作用
+3.
+.item:target .smenu {
+    max-height: 10em; /**em会继承父级元素的字体大小**/
+}
+点击item后触发smenu的css,使得smenu的内容显现（原来的 max-height为0） 
+4.demo0
+.btn:before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #3498db;
+    left: 20px;
+    bottom: -7px;  /**向div外伸出7px**/
+    transform: rotate(45deg);  /**旋转45度，变成三角形**/
+}
+5.demo1
+@Keyframe
+关键帧animation
+
+6.demo2
+响应式主页
