@@ -125,7 +125,7 @@ body {
 
 .right-section {
     overflow: hidden;
-    flow: right;
+    float: right;
 }
 
 .item {

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #eee
+        }
+        .step_progressbar {
+            display: block;
+            width: 400px;
+            margin: 100px auto;
+            background-color: #fff
+        }
+        ul {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            justify-content: space-between;
+            counter-reset: step;
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            display: inline-block;
+            position: relative;
+            width: 33.33%;
+            text-align: center;
+            margin: 15px 0;
+        }
+        li::before {
+            display: block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #bdbdbd;
+            line-height: 50px;
+            text-align: center;
+            content: counter(step);
+            counter-increment: step;
+            margin: 10px auto;
+            position: relative;
+            z-index: 2;
+            font-size: 20px;
+        }
+        li.active {
+            color: green;
+            font-weight: bold;
+             
+        } 
+        li::after {
+            content: "";
+            width: 100%;
+            height: 3px;
+            background-color: #bdbdbd;
+            position: absolute;
+            top: 35px;
+            left: -50%; /**反向**/
+            z-index: 1;
+        }
+        li:first-child::after {
+            content: none
+        }
+        li.active + li::after {
+            background-color: green;
+        }
+        li.active::before{
+            background-color: green;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="step_progressbar">
+        <ul>
+            <li class="active">Step 1</li>
+            <li>Step 2</li>
+            <li>Step 3</li>
+        </ul>
+    </div>
+</body>
+</html>

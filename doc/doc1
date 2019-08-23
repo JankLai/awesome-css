@@ -8,7 +8,7 @@ a:hover:before
     max-height: 10em; /**em会继承父级元素的字体大小**/
 }
 点击item后触发smenu的css,使得smenu的内容显现（原来的 max-height为0） 
-4.demo0
+4.demo0  伪元素
 .btn:before {
     content: "";
     position: absolute;
@@ -28,3 +28,9 @@ a:hover:before
 
 7.demo4
 8位（#1e000000）头两位是透明度，后6位是RGB值，00是完全透明，ff是完全不透明，比较适中的透明度值是 1e
+
+8.demo7
+         li.active + li::after {
+            background-color: green;
+        }
+        匹配li.active后面的一个li的为元素::after
