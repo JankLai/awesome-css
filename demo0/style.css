@@ -7,7 +7,7 @@
 }
 
 body {
-    transition: 3s; /**3s背景显示完毕**/
+    /* transition: 3s; *3s背景显示完毕* */
     background-color: rebeccapurple;
 }
 
